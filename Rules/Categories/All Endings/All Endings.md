@@ -7,4 +7,4 @@
 - There is no set order of completion for endings; complete them in any order.
 - You are not required to reset your progress (as long as the game doesnt shut down after completing every ending).
 
-# Timing TEST2
+# Timing
