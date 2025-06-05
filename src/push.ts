@@ -81,6 +81,9 @@ const updatedValuePaths = updatedVariablePaths.filter(dir => dir.endsWith('.md')
 for (const rulePath of updatedValuePaths) {
     const valueName = rulePath.split('/')[rulePath.split('/').length - 1].split('.')[0];
     const value = values.find(val => sanitize(val.name) === valueName);
+    console.log(valueName);
+    console.log(value);
+    console.log(rulePath);
     
     if (!updatedVars.has(value.variableId)) {
         updatedVars.set(value.variableId, {});
