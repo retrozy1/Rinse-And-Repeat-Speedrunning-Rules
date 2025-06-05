@@ -1,1 +1,1 @@
-Game version range the run is on.
+Version of Rinse And Repeat you are playing on
