@@ -106,10 +106,10 @@ updatedVars.forEach(async (value, key) => {
         v.rules = val.newRules;
     }
 
-    await client.PutVariableUpdate({
+    client.PutVariableUpdate({
         gameId: process.env.GAME_ID,
         variableId: key,
         variable,
         values: variableValues
-    });
+    }).then(res => console.log('i did my thing'))
 })
