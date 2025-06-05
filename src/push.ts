@@ -21,9 +21,11 @@ const client = new Client({
     PHPSESSID: process.env.PHPSESSID
 });
 
-const { categories, levels, variables, values } = await Client.GetGameData({
+let { categories, levels, variables, values } = await Client.GetGameData({
     gameId: process.env.GAME_ID
 });
+
+values = values.filter(v => !v.archived);
 
 //Gets an array of strings of modified file dirs from last commit
 const changedFiles = execSync('git diff --name-status HEAD~1 HEAD', { encoding: 'utf-8' })
@@ -96,19 +98,18 @@ for (const rulePath of updatedValuePaths) {
 
 updatedVars.forEach(async (value, key) => {
     const variable = variables.find(v => v.id === key);
+    const variableValues = values.filter(v => v.variableId === key);
     if (value.newDescription) variable.description = value.newDescription;
 
-    let changedValues: Value[];
     for (const val of value.newValues) {
-        const v = values.find(v => v.id === v.id)
+        const v = variableValues.find(v => v.id === val.valueId)
         v.rules = val.newRules;
-        changedValues.push(v);
     }
 
     await client.PutVariableUpdate({
         gameId: process.env.GAME_ID,
         variableId: key,
         variable,
-        values
+        values: variableValues
     });
 })
