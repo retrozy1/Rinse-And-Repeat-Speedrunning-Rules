@@ -1,3 +1,6 @@
-*All rules from game rules apply.*
+**Complete the 'You Died.' secret ending (stop showering in the shower most of the way through).**
 
-You must complete the main ending where you die to a monster while taking a shower.
+# Timing
+
+- Run starts the frame you load into the 3D gameplay.
+- Run ends the frame the **'You Died. That which you feared has manifested.'** screen pops up.

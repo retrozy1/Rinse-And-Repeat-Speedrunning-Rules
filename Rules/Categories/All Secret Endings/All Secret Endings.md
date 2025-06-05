@@ -1,5 +1,10 @@
-*All rules from game rules apply.*
+*Also refer to [Game rules](/rinse_and_repeat/leaderboards?rules=game) and choose the version on the Version Range subcategory under these rules for the rules for that version.*
 
-You must complete all secret endings, in any order.
+**Complete all secret endings.**
 
-It must be played on versions 1.2-1.4 since other versions don't have multiple secret endings.
+# General
+
+- There is no set order of completion for endings; complete them in any order.
+- You are not required to reset your progress (as long as the game doesnt shut down after completing every ending).
+
+# Timing

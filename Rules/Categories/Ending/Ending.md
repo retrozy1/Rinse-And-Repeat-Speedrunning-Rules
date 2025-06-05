@@ -1,5 +1,1 @@
-*All rules from game rules apply.*
-
-Complete an ending.
-
-Any version is allowed.
+*Also refer to [Game rules](/rinse_and_repeat/leaderboards?rules=game).*
