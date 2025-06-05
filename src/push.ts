@@ -83,7 +83,7 @@ for (const rulePath of updatedValuePaths) {
     const value = values.find(val => sanitize(val.name) === valueName);
     
     if (!updatedVars.has(value.variableId)) {
-        updatedVars.set(value.variableId, {});
+        updatedVars.set(value.variableId, { newValues: [] });
     }
     const varElement = updatedVars.get(value.variableId)
     varElement.newValues.push({ valueId: value.id, newRules: await readMarkdown(rulePath) });
