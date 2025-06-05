@@ -9,3 +9,4 @@
 - Game audio is **required**.
 
 *Suggest changes to any rules in the [rule repository](https://github.com/retrozy1/Rinse-And-Repeat-Speedrunning-Rules).*
+TEST
