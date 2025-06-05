@@ -98,11 +98,11 @@ updatedVars.forEach(async (value, key) => {
     const variable = variables.find(v => v.id === key);
     if (value.newDescription) variable.description = value.newDescription;
 
-    let values: Value[];
+    let changedValues: Value[];
     for (const val of value.newValues) {
         const v = values.find(v => v.id === v.id)
         v.rules = val.newRules;
-        values.push(v);
+        changedValues.push(v);
     }
 
     await client.PutVariableUpdate({
