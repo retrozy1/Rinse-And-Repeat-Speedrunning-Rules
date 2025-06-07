@@ -99,7 +99,7 @@ for (const rulePath of updatedValuePaths) {
     const variableName = rulePath.split('/')[rulePath.split('/').length - 3];
     let availableVariables: Variable[];
 
-    const directSubpath = rulePath.split('/')[2];
+    const directSubpath = rulePath.split('/')[1];
 
     if (directSubpath === 'Categories') {
 
