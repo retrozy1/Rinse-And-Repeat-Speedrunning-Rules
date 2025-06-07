@@ -103,7 +103,7 @@ for (const rulePath of updatedValuePaths) {
 
     if (directSubpath === 'Categories') {
 
-        const categoryName = rulePath.split('/')[3];
+        const categoryName = rulePath.split('/')[2];
 
         let category = findItemByName(categories, categoryName)
         console.log(rulePath);
