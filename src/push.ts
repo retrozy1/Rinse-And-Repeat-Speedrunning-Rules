@@ -115,7 +115,7 @@ for (const rulePath of updatedValuePaths) {
 
     } else if (directSubpath === 'Levels') {
 
-        const levelName = rulePath.split('/')[3];
+        const levelName = rulePath.split('/')[2];
 
         let level = findItemByName(levels, levelName);
         if (!level) level = findItemById(levels, levelName.slice(-8));
@@ -128,8 +128,8 @@ for (const rulePath of updatedValuePaths) {
 
     } else if (directSubpath === 'MappedVariables') {
 
-        const levelName = rulePath.split('/')[3];
-        const categoryName = rulePath.split('/')[4];
+        const levelName = rulePath.split('/')[2];
+        const categoryName = rulePath.split('/')[3];
 
         let level = findItemByName(levels, levelName);
         if (!level) level = findItemById(levels, levelName.slice(-8));
