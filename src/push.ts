@@ -106,6 +106,7 @@ for (const rulePath of updatedValuePaths) {
         const categoryName = rulePath.split('/')[3];
 
         let category = findItemByName(categories, categoryName)
+        console.log(category)
         if (!category) category = findItemById(categories, categoryName.slice(-8));
 
         availableVariables = variables.filter(v => v.categoryId === category.id && !v.levelId);
