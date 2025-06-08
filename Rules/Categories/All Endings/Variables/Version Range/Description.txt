@@ -1,1 +1,1 @@
-Game version range the run is on..
+Range of Versions you are playing on.
