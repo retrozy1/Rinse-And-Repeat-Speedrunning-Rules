@@ -1,0 +1,30 @@
+name: Check for Rule Changes on Speedrun.com
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  maybe-run:
+    runs-on: ubuntu-latest
+    env:
+        PHPSESSID: ${{ secrets.PHPSESSID }}
+    steps:
+      - name: Validate required secrets
+        run: |
+          if [ -z "${{ secrets.PHPSESSID }}" ]; then
+            echo "Required secrets PHPSESSID is not set. Exiting."
+            exit 1
+          fi
+          echo "Secrets are set. Proceeding with the job."
+
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx tsx src/pull.ts
