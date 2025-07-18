@@ -1,0 +1,1 @@
+*Also refer to [Game rules](/rinse_and_repeat/leaderboards?rules=game).*
